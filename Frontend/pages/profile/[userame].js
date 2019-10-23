@@ -4,6 +4,7 @@ import Layout from '../../components/Layout';
 import { userPublicProfile } from '../../actions/user';
 import { API, DOMAIN, APP_NAME, FB_APP_ID } from '../../config';
 import moment from 'moment';
+import ContactForm from '../../components/form/ContactForm';
 
 const UserProfile = ({ user, blogs, query }) => {
     const head = () => (
@@ -19,9 +20,9 @@ const UserProfile = ({ user, blogs, query }) => {
             <meta property="og:url" content={`${DOMAIN}/profile/${query.username}`} />
             <meta property="og:site_name" content={`${APP_NAME}`} />
 
-            <meta property="og:image" content={`${DOMAIN}/static/images/seoblog.jpg`} />
-            <meta property="og:image:secure_url" content={`${DOMAIN}/static/images/seoblog.jpg`} />
-            <meta property="og:image:type" content="image/jpg" />
+            <meta property="og:image" content={`${DOMAIN}/public/static/images/seoblog.jpeg`} />
+            <meta property="og:image:secure_url" content={`${DOMAIN}/public/static/images/seoblog.jpeg`} />
+            <meta property="og:image:type" content="image/jpeg" />
             <meta property="fb:app_id" content={`${FB_APP_ID}`} />
         </Head>
     );
@@ -90,7 +91,7 @@ const UserProfile = ({ user, blogs, query }) => {
                                         Message {user.name}
                                     </h5>
                                     <br />
-                                    <p>contact form</p>
+                                    <ContactForm authorEmail={user.email} />
                                 </div>
                             </div>
                         </div>
