@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Link from 'next/link';
 import Router from 'next/router';
@@ -35,7 +36,7 @@ const Header = () => {
     <React.Fragment>
       <Navbar color="light" light expand="md">
         <Link href="/">
-          <NavLink style={{ cursor: 'pointer' }} className="font-weight-bold">{APP_NAME}</NavLink>
+          <NavLink  style={{ cursor: 'pointer' }}className="font-weight-bold">{APP_NAME}</NavLink>
         </Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -43,7 +44,7 @@ const Header = () => {
             <React.Fragment>
               <NavItem>
                 <Link href="/blogs">
-                  <NavLink style={{ cursor: 'pointer' }} >Blogs</NavLink>
+                  <NavLink style={{ cursor: 'pointer' }}>Blogs</NavLink>
                 </Link>
               </NavItem>
 
@@ -94,9 +95,9 @@ const Header = () => {
             )}
 
             <NavItem>
-              <Link href="/user/crud/blog">
-                <NavLink  style={{ cursor: 'pointer' }}className="btn btn-primary text-light">Write a blog</NavLink>
-              </Link>
+              <a style={{ cursor: 'pointer' }} href="/user/crud/blog" className="btn btn-primary text-light">
+                Write a blog
+              </a>
             </NavItem>
           </Nav>
         </Collapse>
